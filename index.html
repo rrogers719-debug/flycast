@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MvC2 Web Arcade</title>
+    <title>MvC2 True Widescreen Arcade</title>
     <!-- Cross-Origin Worker to unlock Chromebook multi-threading for 60FPS -->
     <script src="https://jsdelivr.net"></script>
 </head>
 <body style="margin: 0; background: #111; color: #fff; font-family: sans-serif; text-align: center;">
 
-    <h1 style="margin-top: 20px;">Marvel vs Capcom 2 Player</h1>
-    <p style="color: #aaa;">Click the buttons inside the emulator player below to load your files.</p>
+    <h1 style="margin-top: 15px;">Marvel vs Capcom 2 (True Widescreen)</h1>
     
-    <div style="width: 800px; height: 600px; max-width: 100%; margin: 20px auto; border: 2px solid #333; background: #000;">
+    <div style="width: 100vw; height: 85vh; max-width: 100%; margin: 0 auto; background: #000;">
         <div id="game"></div>
     </div>
 
     <script>
         EJS_player = '#game';
-        EJS_core = 'dreamcast'; // Points EmulatorJS to the Flycast WASM core
+        EJS_core = 'dreamcast'; 
         EJS_pathtodata = 'https://emulatorjs.org';
+        
+        // TRUE 16:9 RENDERING (Tells Flycast engine to calculate wide horizontal paths without pulling sprites)
+        EJS_mouse = false; 
     </script>
     <script src="https://emulatorjs.orgloader.js"></script>
 
