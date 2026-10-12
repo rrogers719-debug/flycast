@@ -18,12 +18,13 @@
     <script>
         EJS_player = '#game';
         EJS_core = 'dreamcast'; 
-        EJS_pathtodata = 'https://emulatorjs.org';
+        // Official working library endpoints for EmulatorJS
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
         
-        // TRUE 16:9 RENDERING (Tells Flycast engine to calculate wide horizontal paths without pulling sprites)
+        // TRUE 16:9 RENDERING: Widens game perspective instead of stretching sprites
         EJS_mouse = false; 
     </script>
-    <script src="https://emulatorjs.orgloader.js"></script>
+    <script src="https://emulatorjs.org"></script>
 
 </body>
 </html>
